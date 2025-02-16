@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <title>Be my Valentine? </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <h1>Will you be my valentine?</h1>
+            <div class="buttons">
+                <button id="yes-btn">Yes</button>
+                 <button id="no-btn">No</button>
+            </div>
+            <p id="message"></p>
+        </div>
+        <script src="script.js"></script>
+    </body>
+    </html>
+
+  body {
+    font-family: "Arial", sans-serif;
+    text-align: center;
+    background: linear-gradient(to right, #c0eb6a, #fff07c);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin-top: 100px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 28px;
+    color: #388e3c;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#yes-btn {
+    background-color: #8bc34a;
+    color: white;
+}
+
+#no-btn {
+    background-color: #ffeb3b;
+    color: black;
+}
+
+#message {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #2e7d32;
+}
+
+let noClickCount = 0;
+document.getElementById("yes-btn").addEventListener("click", function() {
+    document.getElementById9("message").innerHTML ="I knew you would say yes! <br> I love you so much! ";
+});
+document.getElementById("no-btn").addEventListener("click", function() {
+noClickCount++;
+if (noClickCount == 1){
+    document.getElementById("message").innerHTML = "are you sure? :(((";
+} else if (noClickCount == 2) {
+    document.getElementById("message").innerHTML = "really sure? :(((";
+} else if (noClickCount == 3) {
+    document.getElementById("message").innerHTML = "you're breaking my heart:(((";
+} else {
+    document.getElementById("message").innerHTML = "okay.....i'm sad now:(((";
+}
+});
